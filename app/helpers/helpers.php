@@ -20,7 +20,7 @@ function sendSMS(array $data)
         CURLOPT_FOLLOWLOCATION => true,
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
         CURLOPT_CUSTOMREQUEST => 'POST',
-        CURLOPT_POSTFIELDS => array('body' => $data["message"], 'from' => $data["sender"] ?? $sender, 'to' => $data["phone"], 'api_token' => '83TwlBsekwu7ncGnsVHCfgxBzgq1rG6Dr7K3rOcuF2AhrgoLEOf2ZNJL49x3'),
+        CURLOPT_POSTFIELDS => array('body' => $data["message"], 'from' => $data["sender"], 'to' => $data["phone"], 'api_token' => '83TwlBsekwu7ncGnsVHCfgxBzgq1rG6Dr7K3rOcuF2AhrgoLEOf2ZNJL49x3'),
     ));
 
     $response = curl_exec($curl);

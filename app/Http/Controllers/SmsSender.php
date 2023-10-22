@@ -37,7 +37,7 @@ class SmsSender extends Controller
         $sms = GenericMessage::where("status", "pending")->get();
         foreach ($sms as $message) {
             $data = [
-                "phone" => $message->phone,
+                "phone" => $message->phone_number,
                 "message" => $message->message,
                 "sender" => $message->sender
             ];
